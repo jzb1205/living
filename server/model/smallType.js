@@ -12,8 +12,7 @@ const smallType = sequelize.define('smalltype', {
   },
   belongBigType: {
     type: Sequelize.STRING,
-    allowNull: true,
-    unique: true
+    allowNull: true
   },
   creator: {
     type: Sequelize.STRING,

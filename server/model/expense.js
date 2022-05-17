@@ -1,12 +1,12 @@
 const { sequelize, Sequelize } = require('../connect')
 
-const expenseDetail = sequelize.define('expensedetail', {
+const expense = sequelize.define('expense', {
   expenseItem: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     allowNull: false
   },
   money: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     allowNull: false
   },
   bigTypeId: {
@@ -29,14 +29,18 @@ const expenseDetail = sequelize.define('expensedetail', {
     type: Sequelize.STRING,
     allowNull: true
   },
+  date: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
   creator: {
     type: Sequelize.STRING,
     allowNull: false
   }
 });
 
-expenseDetail.sync().then(() => {
-  console.log('expenseDetail模型同步成功')
+expense.sync().then(() => {
+  console.log('expense模型同步成功')
 })
 
-module.exports = { expenseDetail }
+module.exports = { expense }

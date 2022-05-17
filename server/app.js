@@ -18,10 +18,11 @@ require('./model/user')
 require('./model/menu')
 require('./model/bigType')
 require('./model/smallType')
-require('./model/expenseDetail')
+require('./model/expense')
 
 //路由
 const main = require('./router/main')
+
 //为main匹配地址 /api
 app.use('/api', main)
 

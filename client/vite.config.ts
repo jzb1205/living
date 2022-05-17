@@ -8,5 +8,19 @@ export default defineConfig({
     proxy: {
       '/api': 'http://localhost:8888/api',
     }
-  }
+  },
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@views': '/src/views',
+    }
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {},
+        javascriptEnabled: true,
+      },
+    },
+  },
 })
